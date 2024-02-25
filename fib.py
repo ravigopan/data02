@@ -5,12 +5,18 @@ def fibonacci(n):
         fib_series.append(next_term)  # Add next term to the series
     return fib_series
 
+def check_for_odd(num):
+    if num % 2 == 0:
+        return False
+    else:
+        return True
+
 # Function to print Fibonacci series up to n terms
 def print_fibonacci_series(n):
     fib_series = fibonacci(n)
     print("Fibonacci Series up to", n, "terms:")
     for num in fib_series:
-        print(num, end=" ")
+        print(num, check_for_odd(num),  end="\n")
 
 # Example usage:
 num_terms = 10  # Change this value to print more or fewer terms
